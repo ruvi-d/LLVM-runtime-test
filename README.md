@@ -5,7 +5,7 @@
 `./app`
 
 ## Compile runtime as lib
-`clang++-11 -shared -o libruntime.so runtime.cpp`
+`clang++-11 -fPIC -shared -o libruntime.so runtime.cpp`
 `clang++-11 -L$PWD -lruntime -o app square_app.ll`
 `export LD_LIBRARY_PATH=$(pwd)`
 `./app`
